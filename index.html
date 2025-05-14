@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vehicle Management</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🚗 Vehicle Management</h1>
+    <button id="addBtn">Add Vehicle</button>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search by vehicle number" />
+    <button onclick="searchVehicle()">🔍 Search</button>
+  </div>
+
+  <div id="vehicleList" class="list">
+    <p>No vehicles found. Add your first vehicle!</p>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h2>Add Vehicle</h2>
+      <input type="text" id="number" placeholder="Vehicle Number" />
+      <input type="text" id="price" placeholder="Price" />
+      <input type="text" id="model" placeholder="Model" />
+      <input type="text" id="ownerSrNumber" placeholder="Owner SR Number" />
+      <button onclick="addVehicle()">Submit</button>
+      <button onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
